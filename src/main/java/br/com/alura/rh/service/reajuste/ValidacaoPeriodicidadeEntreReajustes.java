@@ -1,4 +1,4 @@
-package br.com.alura.rh.service.regras;
+package br.com.alura.rh.service.reajuste;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -6,7 +6,6 @@ import java.time.temporal.ChronoUnit;
 
 import br.com.alura.rh.ValidacaoException;
 import br.com.alura.rh.model.Funcionario;
-import br.com.alura.rh.service.ValidacaoReajuste;
 
 public class ValidacaoPeriodicidadeEntreReajustes implements ValidacaoReajuste {
 	@Override

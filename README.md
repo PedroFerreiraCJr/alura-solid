@@ -19,7 +19,7 @@ Segundo Robert C. Martin (também conhecido como, Uncle Bob), "Uma classe deveri
 ### Open Closed Principle (OCP) - Princípio Aberto Fechado
 Segundo Bertrand Meyer, "Entidades de software (classes, módulos, funções, etc) devem estar abertas para extensão, porém fechadas para modificação". No exemplo deste projeto, a classe **ReajusteService** está ganhando mais uma regra de negócio relacionada a uma nova verificação quanto a validade de se poder conceder um reajuste de salário a um funcionário. Um questionamento que deve ser feito é... será que ela deve ficar sendo alterada constantemente com novas regras de negócio? Neste caso a resposta é, não. Portanto, foi feito a separação das validações em classes com essa responsabilidade. A classe **ReajusteService** agora, recebe por *injeção de dependência* através do construtor todas as validações que forem necessárias e, no método de calcular o reajuste cada validação vai ser chamada. O que vale ressaltar é que a classe **ReajusteService** não mais está fadada a ficar sendo alterada constantemente toda vez que houver uma nova regra de negócio, assim se tornando uma classe que está seguindo o princípio do *Aberto Fechado*, conforme citado na primeira linha deste parágrafo.
 
-### Liskov Substitution Principle - Princípio da Substituição de Liskov
+### Liskov Substitution Principle (LSP) - Princípio da Substituição de Liskov
 
 ### Interface Segregation Principle - Princípio da Segregação de Interfaces
 
